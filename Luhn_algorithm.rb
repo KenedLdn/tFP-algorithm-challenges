@@ -8,10 +8,7 @@ module Luhn
       arr.size.even? ? arr[n - 1] *= 2 : arr[n] *= 2
       n += 2
     end
-    puts arr.inspect
     sum_digits = arr.collect {|digit| digit >= 10 ? (digit - 9) : digit}
-    puts sum_digits.inspect
-    puts sum_digits.reduce(:+).inspect
     sum_digits.reduce(:+) % 10 == 0
   end
 end
