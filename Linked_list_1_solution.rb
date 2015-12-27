@@ -7,11 +7,6 @@ class LinkedListNode
   end
 end
 
-def print_values(list_node)
-  print "#{list_node.value} --> "
-  list_node.next_node == nil ? (puts 'nil') : print_values(list_node.next_node)
-end
-
 class Stack
   attr_reader :data
 
@@ -31,21 +26,26 @@ class Stack
   end
 end
 
+def print_values(list_node)
+  print "#{list_node.value} --> "
+  list_node.next_node == nil ? (puts 'nil') : print_values(list_node.next_node)
+end
+
 def reverse_list(list)
   revlist = Stack.new
-  while list != nil
+  while list
     revlist.push(list.value)
     list = list.next_node
   end
-  value = revlist.pop
-  LinkedListNode.new(value, revlist.data)
+  revlist.data
 end
 
 node1 = LinkedListNode.new(37)
 node2 = LinkedListNode.new(99, node1)
 node3 = LinkedListNode.new(12, node2)
+node4 = LinkedListNode.new(20, node3)
 
-print_values(node3)
+print_values(node4)
 puts '-------'
-revlist = reverse_list(node3)
+revlist = reverse_list(node4)
 print_values(revlist)
