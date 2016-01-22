@@ -89,9 +89,9 @@ trunk   = Tree.new(2, [seventh_node, fifth_node])
 end
 
 # Use Breadth First Search Algorithm
-# [2, 7, 5, 6, 9, 5, 11, 4, 3].each do |value|
-#   puts "Finding #{value} in this tree with breadth first search..."
-#   trunk.breadth_first_search(value)
-#   puts '--------------------------------------------------------'
-#   puts
-# end
+[2, 7, 5, 6, 9, 5, 11, 4, 3].each do |value|
+  puts "Finding #{value} in this tree with breadth first search..."
+  trunk.breadth_first_search(value)
+  puts '--------------------------------------------------------'
+  puts
+end
