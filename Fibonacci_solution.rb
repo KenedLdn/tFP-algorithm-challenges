@@ -21,7 +21,7 @@ def iterative_fib(n)
   fib_n
 end
 
-test_value = 100
+test_value = 10
 puts recursive_fib(test_value)
 puts iterative_fib(test_value)
 

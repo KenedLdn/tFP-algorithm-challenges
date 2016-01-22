@@ -25,6 +25,7 @@ class Image
     coords_1 = find_1(@pixels)
     blur_output = []
     i = 0
+    puts @pixels.size.inspect
     while i < @pixels.size
       blur_output << Array.new(@pixels[1].size, 0)
       i += 1
