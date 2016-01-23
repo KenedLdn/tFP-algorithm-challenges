@@ -66,6 +66,11 @@ class Queue
   end
 end
 
+def build_tree(array)
+  temp_element = array.shift
+  "node_#{temp_element}" = Tree.new
+end
+
 # The "Leafs" of a tree, elements that have no children
 fifth_node    = Tree.new(5, [])
 eleventh_node = Tree.new(11, [])
