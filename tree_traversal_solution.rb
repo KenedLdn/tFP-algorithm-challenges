@@ -66,10 +66,10 @@ class Queue
   end
 end
 
-def build_tree(array)
-  temp_element = array.shift
-  "node_#{temp_element}" = Tree.new
-end
+# def build_tree(array)
+#   temp_element = array.shift
+#   "node_#{temp_element}" = Tree.new
+# end
 
 # The "Leafs" of a tree, elements that have no children
 fifth_node    = Tree.new(5, [])
@@ -86,12 +86,12 @@ fifth_node = Tree.new(5, [ninth_node])
 trunk   = Tree.new(2, [seventh_node, fifth_node])
 
 # Use Depth First Search Algorithm
-[2, 7, 6, 5, 11, 5, 9, 4, 3].each do |value|
-  puts "Finding #{value} in this tree with depth first search..."
-  trunk.depth_first_search(value)
-  puts '--------------------------------------------------------'
-  puts
-end
+# [2, 7, 6, 5, 11, 5, 9, 4, 3].each do |value|
+#   puts "Finding #{value} in this tree with depth first search..."
+#   trunk.depth_first_search(value)
+#   puts '--------------------------------------------------------'
+#   puts
+# end
 
 # Use Breadth First Search Algorithm
 [2, 7, 5, 6, 9, 5, 11, 4, 3].each do |value|
